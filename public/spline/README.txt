@@ -1,0 +1,1 @@
+Local Spline assets directory. Place .splinecode files here for reliable loading without cross-origin issues.

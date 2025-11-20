@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline'
+import ErrorBoundary from './ErrorBoundary'
 
 export default function ThreeContainer() {
   return (
@@ -16,9 +17,10 @@ export default function ThreeContainer() {
               <li>• Potpuno responzivno</li>
             </ul>
           </div>
-          <div className="h-[420px] rounded-3xl overflow-hidden border border-white/10 bg-[#000]">
-            {/* Spline scene - placeholder public URL; can be replaced with custom scene */}
-            <Spline scene="https://prod.spline.design/iU6CS4wbS-czvb6z/scene.splinecode" />
+          <div className="h-[420px] rounded-3xl overflow-hidden border border-white/10 bg-[#000] relative">
+            <ErrorBoundary>
+              <Spline scene="/spline/container.splinecode" />
+            </ErrorBoundary>
           </div>
         </div>
       </div>

@@ -43,8 +43,9 @@ export default function Hero() {
   const y = useTransform(scrollY, [0, 600], [0, -60])
   const opacity = useTransform(scrollY, [0, 400], [1, 0.7])
 
-  const poster = 'https://images.unsplash.com/photo-1494415859740-21e878dd929d?q=80&w=1600&auto=format&fit=crop'
-  const videoSrc = 'https://storage.googleapis.com/coverr-main/mp4/Truck%20Driving%20on%20a%20Highway.mp4'
+  const poster = 'https://picsum.photos/1600/900?blur=3'
+  // Use a CORS-friendly demo video to avoid 403s
+  const videoSrc = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
 
   return (
     <section className="pt-28 bg-[#0b1722] relative">
