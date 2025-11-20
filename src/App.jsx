@@ -1,71 +1,45 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import ThreeContainer from './components/ThreeContainer'
+import { Services, FleetShowcase, GlassMini } from './components/Sections'
+import Footer from './components/Footer'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
+    <div className="min-h-screen bg-[#0b1722]">
+      <Navbar />
+      <main>
+        <Hero />
+        <GlassMini />
+        <ThreeContainer />
+        <Services />
+        <FleetShowcase />
+        <section id="kontakt" className="relative py-20 bg-[#0b1722]">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#003a75]/30 to-[#152b3d]/50 p-8 md:p-12 backdrop-blur-md">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white">Spremni za sledeću isporuku?</h3>
+                  <p className="text-[#e7e7e7] mt-2">Pošaljite nam detalje pošiljke i naš tim će vam se javiti u najkraćem roku.</p>
+                  <ul className="mt-6 text-[#e7e7e7] space-y-1">
+                    <li>• FTL / LTL • Hladnjače • ADR</li>
+                    <li>• EU + Balkan pokrivenost</li>
+                    <li>• Praćenje 24/7</li>
+                  </ul>
+                </div>
+                <form className="grid grid-cols-1 gap-4">
+                  <input className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-[#e7e7e7]" placeholder="Ime i prezime" />
+                  <input className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-[#e7e7e7]" placeholder="Email" />
+                  <input className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-[#e7e7e7]" placeholder="Relacija (npr. Beograd → Berlin)" />
+                  <textarea className="px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-[#e7e7e7]" placeholder="Opis tereta" rows="4" />
+                  <button type="button" className="mt-2 px-5 py-3 rounded-xl bg-[#ee5e2a] text-white font-medium shadow-[0_10px_30px_rgba(238,94,42,0.35)]">Pošalji upit</button>
+                </form>
               </div>
             </div>
           </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
-          </div>
-        </div>
-      </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   )
 }
